@@ -17,8 +17,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
     let application = UIApplication.shared
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
