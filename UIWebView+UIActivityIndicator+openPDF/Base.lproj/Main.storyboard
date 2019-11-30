@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIWebView_UIActivityIndicator_openPDF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gwI-oV-l5M">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JP5-Km-VPn">
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="iav-p3-BNm"/>
+                                </constraints>
+                                <items/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ScS-2I-byX">
+                                <rect key="frame" x="0.0" y="808" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="V2L-9c-iJj">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="goBackAction:" destination="BYZ-38-t0r" id="Nol-ZC-8tp"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="02i-YP-cSX"/>
+                                    <barButtonItem systemItem="fastForward" id="cee-ov-CtF">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="goForwardAction:" destination="BYZ-38-t0r" id="UJQ-xA-OiI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="FGo-vJ-rWQ"/>
+                                    <barButtonItem systemItem="refresh" id="xA9-bR-eHO">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="refreshAction:" destination="BYZ-38-t0r" id="U2s-cc-qB3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="KEe-4y-d8E">
+                                <rect key="frame" x="197" y="460" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gwI-oV-l5M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5QS-Pt-TsG"/>
+                            <constraint firstItem="KEe-4y-d8E" firstAttribute="centerX" secondItem="gwI-oV-l5M" secondAttribute="centerX" id="AO1-Up-cc4"/>
+                            <constraint firstItem="JP5-Km-VPn" firstAttribute="leading" secondItem="ScS-2I-byX" secondAttribute="leading" id="O8X-lr-K7B"/>
+                            <constraint firstItem="JP5-Km-VPn" firstAttribute="top" secondItem="ScS-2I-byX" secondAttribute="bottom" id="P60-S9-kMA"/>
+                            <constraint firstItem="gwI-oV-l5M" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Txl-BD-YZE"/>
+                            <constraint firstItem="gwI-oV-l5M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UtV-sE-2wW"/>
+                            <constraint firstItem="ScS-2I-byX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Vpe-4l-v7C"/>
+                            <constraint firstItem="ScS-2I-byX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yym-HS-0w5"/>
+                            <constraint firstItem="KEe-4y-d8E" firstAttribute="centerY" secondItem="gwI-oV-l5M" secondAttribute="centerY" id="ezQ-Tb-Kci"/>
+                            <constraint firstItem="JP5-Km-VPn" firstAttribute="bottom" secondItem="gwI-oV-l5M" secondAttribute="bottom" id="jX5-oJ-Mjd"/>
+                            <constraint firstItem="JP5-Km-VPn" firstAttribute="trailing" secondItem="ScS-2I-byX" secondAttribute="trailing" id="mRS-Zy-Mv6"/>
+                            <constraint firstAttribute="bottom" secondItem="gwI-oV-l5M" secondAttribute="bottom" id="rXX-6N-Rlu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndikator" destination="KEe-4y-d8E" id="WiZ-ab-7zh"/>
+                        <outlet property="goBackItem" destination="V2L-9c-iJj" id="pyi-dh-4Df"/>
+                        <outlet property="goForwardItem" destination="cee-ov-CtF" id="bGm-lw-h3G"/>
+                        <outlet property="webView" destination="gwI-oV-l5M" id="YsV-f1-uhg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>
